@@ -1,9 +1,10 @@
+import { Name, Email, Password, Cpf } from '../../validators';
 export default interface User {
     id: string;
-    name: string;
-    email: string;
-    password: string;
-    cpf: number;
+    name: Name;
+    email: Email;
+    password: Password;
+    cpf: Cpf;
     created_at?: Date;
     updated_at?: Date;
 }
