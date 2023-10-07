@@ -1,12 +1,13 @@
 import { v4 as uuidv4 } from 'uuid';
 import UseCase from "../../shared/UseCase";
 import UserCollection from "./UserCollection";
+import { Name, Email, Password, Cpf } from '../../validators';
 
 type EntreceToRegisterUser = {
-    name: string
-    email: string
-    password: string
-    cpf: number
+    name: Name
+    email: Email
+    password: Password
+    cpf: Cpf
 };
 
 export default class CreateUser implements UseCase<EntreceToRegisterUser, void> {

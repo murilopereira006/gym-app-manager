@@ -29,7 +29,7 @@ const emailIsString = (email: string): boolean => {
     return typeof email === "string";
 };
 
-export class Email {
+export default class Email {
     private readonly email: string;
 
     private constructor(email: string) {
