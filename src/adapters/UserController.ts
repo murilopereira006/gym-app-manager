@@ -9,6 +9,8 @@ export default class UserController {
         server.post('/users', async ({ body }) => {
             const { name, email, password, cpf } = body as any;
             await useCase.execute({ name, email, password, cpf });
+
+            return "Usuario criado com sucesso!"
         })
     };
 };
