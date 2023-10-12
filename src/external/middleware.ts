@@ -3,6 +3,7 @@ import User from "../core/user/model/User";
 import UserCollection from "../core/user/service/UserCollection";
 
 export default class middleware implements UserCollection {
+
     private prisma: PrismaClient;
     constructor() {
         this.prisma = new PrismaClient();
@@ -15,6 +16,7 @@ export default class middleware implements UserCollection {
             }
         })
     }
+
     findUserByCPF(cpf: number): Promise<User | null> {
         return this.prisma.user.findUnique({
             where: {
